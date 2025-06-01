@@ -29,7 +29,7 @@ export default async function ArtifactsPage() {
                     {artifacts.map(artifact => (
                         <li key={artifact.artifact_id}>
                             <Link
-                                className="text-neutral-400"
+                                className="text-neutral-400 text-ellipsis hover:text-neutral-200 transition-colors"
                                 href={`/artifacts/${artifact.artifact_id}`}
                             >
                                 {artifact.artifact_file_name}
