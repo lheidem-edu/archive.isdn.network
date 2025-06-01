@@ -4,6 +4,8 @@ import Link from "next/link";
 import React from "react";
 import "./tailwind.css";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
     authors: [{ name: "Luca Heidemann", url: "https://lheidem.net/" }],
 };
