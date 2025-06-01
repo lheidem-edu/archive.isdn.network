@@ -26,7 +26,7 @@ export default function Page() {
                 </p>
             </section>
 
-            			<section className="space-y-4">
+            <section className="space-y-4">
                 <h2 className="text-2xl font-semibold tracking-tight text-neutral-200">Disclaimer</h2>
                 <p className="text-neutral-400 text-justify">This platform is a private, non-commercial project. All content provided is for learning, research and experimentation purposes only. Use is at your own risk &mdash; we accept no liability for any damage or loss of data.</p>
                 <p className="text-neutral-400 text-justify">External links lead to resources outside our sphere of influence. The respective operators are solely responsible for their content. No violations were apparent at the time of linking. It is not technically feasible to continuously check external content. Should any legal infringements become known, the corresponding links will be removed immediately.</p>
