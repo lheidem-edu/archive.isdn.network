@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getArtifact, getArtifactDownloadUrl } from "../../../lib/artifacts";
 
+export const runtime = "edge";
+
 export async function generateMetadata({ params }: { params: Promise<{id: UUID | string}>}): Promise<Metadata> {
     const { id } = await params;
 
