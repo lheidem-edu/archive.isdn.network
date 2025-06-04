@@ -10,7 +10,11 @@ export type Artifact = {
 
 export async function getArtifacts(): Promise<Artifact[]> {
     try {
-        const response = await fetch("https://api.isdn.network/api/v1/artifacts");
+        const response = await fetch("https://api.isdn.network/api/v1/artifacts", {
+            next: {
+                revalidate: 3600
+            }
+        });
 
         if (!response.ok) {
             throw new Error(`An error has occurred while fetching artifacts: HTTP ${response.status}`);
@@ -26,7 +30,11 @@ export async function getArtifacts(): Promise<Artifact[]> {
 
 export async function getArtifact(artifactId: UUID | string): Promise<Artifact> {
     try {
-        const response = await fetch(`https://api.isdn.network/api/v1/artifacts/${artifactId}`);
+        const response = await fetch(`https://api.isdn.network/api/v1/artifacts/${artifactId}`, {
+            next: {
+                revalidate: 3600
+            }
+        });
 
         if (response.status === 404) {
             throw new Error(`An artifact with unique identifier ${artifactId} was not found.`);
