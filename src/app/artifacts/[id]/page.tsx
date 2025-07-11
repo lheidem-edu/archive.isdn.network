@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{id: UUID |
     }
 
     return {
-        title: `${artifact.artifact_file_name} - archive @ isdn.network`,
-        description: `${artifact.artifact_file_name} (${artifact.artifact_file_length} bytes)`,
+        title: `${artifact.file_name} - archive @ isdn.network`,
+        description: `${artifact.file_name} (${artifact.file_length} bytes)`,
     };
 }
 
@@ -32,7 +32,7 @@ export default async function ArtifactDetailPage({ params }: { params: Promise<{
                     Artifact Details
                 </h1>
                 <p className="text-neutral-400 text-ellipsis overflow-hidden">
-                    {artifact.artifact_file_name} ({artifact.artifact_file_length} bytes)
+                    {artifact.file_name} ({artifact.file_length} bytes)
                 </p>
                 <p className="text-neutral-400">
                     <a

@@ -1,11 +1,11 @@
 import { UUID } from "crypto";
 
 export type Artifact = {
-    artifact_id: UUID;
-    artifact_file_name: string;
-    artifact_file_length: number;
-    artifact_created_at: string;
-    artifact_updated_at: string;
+    id: UUID;
+    file_name: string;
+    file_length: number;
+    created_at: string;
+    updated_at: string;
 };
 
 export async function getArtifacts(): Promise<Artifact[]> {
