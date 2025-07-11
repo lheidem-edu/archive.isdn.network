@@ -25,8 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const artifacts = await getArtifacts();
     artifacts.forEach(artifact => {
         routes.push({
-            url: `https://archive.isdn.network/artifacts/${artifact.artifact_id}`,
-            lastModified: new Date(artifact.artifact_updated_at),
+            url: `https://archive.isdn.network/artifacts/${artifact.id}`,
+            lastModified: new Date(artifact.updated_at),
             changeFrequency: "yearly",
             priority: 0.8
         });
