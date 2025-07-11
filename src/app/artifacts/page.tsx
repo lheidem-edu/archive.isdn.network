@@ -27,12 +27,12 @@ export default async function ArtifactsPage() {
                 </h2>
                 <ul className="list-none space-y-2">
                     {artifacts.map(artifact => (
-                        <li key={artifact.artifact_id}>
+                        <li key={artifact.id}>
                             <Link
                                 className="text-neutral-400 text-ellipsis hover:text-neutral-200 transition-colors overflow-hidden"
-                                href={`/artifacts/${artifact.artifact_id}`}
+                                href={`/artifacts/${artifact.id}`}
                             >
-                                {artifact.artifact_file_name}
+                                {artifact.file_name}
                             </Link>
                         </li>
                     ))}
